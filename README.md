@@ -34,6 +34,8 @@ Build client
 cd frontend/
 npm install
 npm build --prod
+mkdir ../src/main/resources/static/
+cp -r dist/* ../src/main/resources/static/
 ```
 
 Build server
@@ -42,7 +44,7 @@ mvn package
 java -jar target/books-0.1.0.jar 
 ```
 
-# Production (with Docker)
+## Production (with Docker)
 
 ```
 docker build -t books:v1 .
